@@ -1,0 +1,98 @@
+body{
+    background-color: rgb(229, 169, 147);
+font-family: dancing script,sans-serif;
+}
+.fixed-btn {
+  position: fixed;
+  top: 20px;
+ margin-left: 30%;
+  padding: 12px 18px;
+  background-color: rgb(235, 148, 163);
+  color: rgb(10, 10, 10);
+  font-size:30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+   font-family: 'Dancing Script', sans-serif;
+  z-index: 10;
+  box-shadow: 10px 10px 10px #000;
+}
+.b-1 {
+  text-align: center;
+  margin: 5% auto;
+  box-shadow: 20px 20px 100px white;
+  color: blanchedalmond;
+  background-color: black;
+margin-top: 130px;
+  width: 90%;            /* Changed */
+  max-width: 990px;      /* Keeps it max on large screens */
+  height: auto;          /* Changed to allow flexible height */
+  padding: 50px 20px;
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1.2s ease-in-out;
+}
+
+
+.b-1.active {
+  opacity: 1;
+  transform: translateY(0px);
+
+}
+.t-1 {
+  border-radius: 15px;
+  color: rgb(15, 15, 15);
+  background-color: rgb(228, 126, 126);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.t-1:hover {
+  background-color: rgb(236, 155, 125);
+}
+
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+.fade-text {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Delays for staggered effect */
+.delay-1 { animation-delay: 1s; }
+.delay-2 { animation-delay: 1.5s; }
+.delay-3 { animation-delay: 2s; }
+.delay-4 { animation-delay: 2.5s; }
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    
+    }
+}
+
+@media (max-width: 600px) {
+  .b-1 {
+    width: 95%;
+    padding: 30px 15px;
+    font-size: 16px;
+  }
+
+  .t-1 h2 {
+    font-size: 18px;
+  }
+
+  h1, h2 {
+    font-size: 20px;
+  }
+}
+
